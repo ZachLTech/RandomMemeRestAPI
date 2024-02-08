@@ -1,18 +1,16 @@
 {
   "name": "app",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.50",
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240129.0",
-    "typescript": "^5.0.4",
-    "wrangler": "^3.0.0"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "hono": "^3.12.9"
-  }
+    "@elysiajs/html": "^0.8.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
 }
