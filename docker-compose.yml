@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  Meme_API:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-zachMemes
+    restart: unless-stopped
+    ports:
+      - 9786:3000
