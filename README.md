@@ -16,12 +16,12 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 
 ### For JSON Results
 - [`/funny/random/json`](https://memeapi.zachl.space/funny/random/json)
-- [`/funny/vid/json`](https://memeapi.zachl.space/funny/random/json)
-- [`/funny/pic/json`](https://memeapi.zachl.space/funny/random/json)
+- [`/funny/vid/json`](https://memeapi.zachl.space/funny/vid/json)
+- [`/funny/pic/json`](https://memeapi.zachl.space/funny/pic/json)
 ### For HTML Results
-- [`/funny/random/html`](https://memeapi.zachl.space/funny/random/json)
-- [`/funny/vid/html`](https://memeapi.zachl.space/funny/random/json)
-- [`/funny/pic/html`](https://memeapi.zachl.space/funny/random/json)
+- [`/funny/random/html`](https://memeapi.zachl.space/funny/random/html)
+- [`/funny/vid/html`](https://memeapi.zachl.space/funny/vid/html)
+- [`/funny/pic/html`](https://memeapi.zachl.space/funny/pic/html)
 
 ## TODO
 - ~~Setup semi-public file sharing system for meme source~~
