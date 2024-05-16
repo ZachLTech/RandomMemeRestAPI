@@ -1,7 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Varela+Round&display=swap');
+  
+*{
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1c0808;
+    z-index: 1;
+    user-select: none;
+}
 
 body{
-    background: black;
+    background: #fff7d3;
+}
+
+section{
+    width: 100vw;
+    height: 95vh;   
 }
