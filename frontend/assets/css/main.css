@@ -9,6 +9,7 @@
     font-style: normal;
     z-index: 1;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 body{
