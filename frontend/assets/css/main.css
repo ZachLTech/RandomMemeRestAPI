@@ -8,15 +8,16 @@
     font-weight: 400;
     font-style: normal;
     z-index: 1;
-    user-select: none;
     scroll-behavior: smooth;
 }
 
 body{
     overflow-x: hidden;
 }
+h1,p,img{
+    user-select: none;
+}
 
 section{
-    width: 100vw;
-    height: 95vh;   
+    width: 100vw; 
 }
