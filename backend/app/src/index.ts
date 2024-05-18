@@ -2,15 +2,25 @@ import { Elysia } from 'elysia'
 import { html } from '@elysiajs/html'
 
 const app = new Elysia()
+    .get('/', () => { // Message for Root
+      let json = {
+        Greetings: "Welcome to Zach's Meme API! Below are links to where you can get more info and find all the endpoints attached to this RESTful API.",
+        Website: "https://memes.zachl.space",
+        Source: "https://github.com/ZachLTech/RandomMemeRestAPI",
+        Docs: "https://memes.zachl.space/#docs"
+      };
 
-    .get('/funny/random/json', ({set}) => {
+      return json;
+    })
+
+    .get('/random/json', ({set}) => {
       ((!!(Math.random() * 2 | 0))) ? set.redirect = '/funny/pic/json':set.redirect = '/funny/vid/json'; // Random Bool to redirect- 1 line :D
     })
-    .get('/funny/random/html', ({set}) => {
+    .get('/random/html', ({set}) => {
       ((!!(Math.random() * 2 | 0))) ? set.redirect = '/funny/pic/html':set.redirect = '/funny/vid/html';
     }) 
 
-    .get('/funny/pic/json', () => {
+    .get('/pic/json', () => {
 
       let link = "https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
       let json = {
@@ -21,8 +31,8 @@ const app = new Elysia()
 
       return json;
     })
-    .get('/funny/vid/json', () => {
-
+    .get('/vid/json', () => {
+      
       let link = "https://zipline.lopezhome.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false";
       let json = {
         success: 'true',
@@ -33,10 +43,27 @@ const app = new Elysia()
       return json;
 
     })
+    .get('/pic/json/:amount', ({ params: { amount } }) => {
+      
+      let json = {
+        success: 'true',
+        MemeURL: [],
+        Please: 'Come Again!'
+      };
+      let obj = JSON.parse(json.toString());    
+
+      for(let i = 0; i < Number(amount); i++){
+        obj.MemeURL.push("");
+        
+      }
+
+      return json;
+
+    })
     
     .use(html())
     
-    .get('/funny/pic/html', () => `
+    .get('/pic/html', () => `
               <img id="media" src=""></img>
               <script defer>
                 let media = document.getElementById("media");
@@ -44,7 +71,7 @@ const app = new Elysia()
                 media.setAttribute('src', link);
               </script>
     `)
-    .get('/funny/vid/html', () => `
+    .get('/vid/html', () => `
             <video controls>
               <source id="media" src="" type="video/mp4"></source>
             </video>
