@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-64 rounded-2xl overflow-hidden bg-base-300" id="testimonial">
+    <div class="flex flex-col h-64 rounded-2xl overflow-hidden bg-base-300 shadow-xl" id="testimonial">
         <div class="flex justify-between items-center width-full h-[4rem] bg-base-content border-b-2 border-base-300 px-4 py-2">
             <div class="avatar">
                 <div class="w-11 rounded-full">

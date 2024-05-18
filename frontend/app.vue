@@ -1,24 +1,11 @@
 <template>
-  <section id="hero" class="flex justify-center items-center h-[85vh]">
+  <div id="hero" class="flex justify-center items-center h-[85vh]">
     <hero />
-  </section>
+  </div>
   <section id="demo" class="flex justify-center items-center">
-    <div class="divider mx-5 w-[20vw]"></div>
-    <div class="mockup-window border bg-base-300 w-[60vw] -translate-y-16">
-      <div class="flex px-4 py-8 bg-base-200 h-[40vh]">
-        <p class="text-3xl leading-relaxed">
-          > 
-          <span class="select-text">curl -L https://memeapi.zachl.space/funny/random/html</span>
-          <br><br>
-          &emsp;&lt;videoORimg controls&gt;<br>
-          &emsp;&emsp;&lt;source type="CouldBe/mp4ORpng"&gt;&lt;/source&gt;<br>
-          &emsp;&lt;/videoORimg&gt;
-        </p>
-      </div>
-    </div>
-    <div class="divider mx-5 w-[20vw]"></div>
+    <separator />
   </section>
-  <section id="about" class="flex flex-col justify-center items-center gap-24 mt-24 mb-24">
+  <section id="about" class="flex flex-col justify-center items-center gap-24 h-auto">
     <div class="flex flex-col gap-5 justify-center items-center">
       <h1 class="text-5xl font-bold">Why Use This?</h1>
       <p class="text-3xl max-w-[900px]">
@@ -39,4 +26,38 @@
       <testimonial :width="'49vw'" :name="'Jossaya Camel 🐪'" :timeSince="'8 Days'" :testimonialText="'Wowza this API was so great that it saved my entire family from falling apart. Truly amazing and resulted in my company avoiding bankruptcy!! 10/10 would recommend.'" :imageSrc="'/images/jossaya.png'" />
     </div>    
   </section>
+  <section id="docs" class="flex flex-col justify-center items-center gap-20">
+    <div class="flex flex-col justify-center items-center gap-8">
+      <h1 class="text-5xl font-bold">Docs & Usage</h1>
+      <p class="text-3xl text-left max-w-[900px]">
+        There are a few endpoints for getting memes using this API to
+        provide optimal customization for you, the user!
+        <br><br>
+        Endpoints ending in `/html` can be copied straight into a
+        browsers URL bar and you'll see results
+      </p>
+    </div>
+    <div role="tablist" class="tabs tabs-lifted self-center mr-0 w-[49vw] shadow-xl rounded-xl bg-base-300 p-2">
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/html" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Provides a meme that might be either a video or photo and returns HTML to serve your funny content</div>
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/json" checked />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box px-4 py-6 text-xl h-[110px]">Provides a meme just as the previous endpoint, except this returns JSON format providing the direct URL to your randomized meme</div>
+
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/html" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny video in HTML format to serve content immediately</div>
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/json" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny video in JSON format for parsing direct video URL</div>
+
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/html" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny picture in HTML format to serve content immediately</div>
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/json" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny picture in JSON format for parsing direct image URL</div>
+    </div>
+  </section>
+  <section class="flex justify-center items-center">
+    <memeGrid :imgTL="" :imgTR="" :imgBL="" :imgBR="" />
+  </section>
 </template>
+<script>
+  const memeArr = [] // Gonna implement where it gets as many as u want & returns json
+</script>
