@@ -15,13 +15,13 @@ website & better readme coming soon...
 Below are the Available API URI's you can use to try my API yourself. I'm making a frontend soon though to display this as well. Have Fun!
 
 ### For JSON Results
-- [`/funny/random/json`](https://memeapi.zachl.space/funny/random/json)
-- [`/funny/vid/json`](https://memeapi.zachl.space/funny/vid/json)
-- [`/funny/pic/json`](https://memeapi.zachl.space/funny/pic/json)
+- [`/random/json`](https://memeapi.zachl.space/random/json)
+- [`/vid/json`](https://memeapi.zachl.space/vid/json)
+- [`/pic/json`](https://memeapi.zachl.space/pic/json)
 ### For HTML Results
-- [`/funny/random/html`](https://memeapi.zachl.space/funny/random/html)
-- [`/funny/vid/html`](https://memeapi.zachl.space/funny/vid/html)
-- [`/funny/pic/html`](https://memeapi.zachl.space/funny/pic/html)
+- [`/random/html`](https://memeapi.zachl.space/random/html)
+- [`/vid/html`](https://memeapi.zachl.space/vid/html)
+- [`/pic/html`](https://memeapi.zachl.space/pic/html)
 
 ## TODO
 - ~~Setup semi-public file sharing system for meme source~~
@@ -30,4 +30,7 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 - ~~secure DB with service restrictions~~
 - ~~Setup and write endpoints / API code~~
 - ~~Integrate docker and deploy API (with working domain & endpoints)~~
-- Make frontend
+- ~~Start on frontend~~
+- Shorten endpoints (already done in readme)
+- Add multi-meme requests to API for frontend
+- Finish Frontend
