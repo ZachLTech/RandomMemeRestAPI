@@ -55,7 +55,7 @@
     </div>
   </section>
   <section class="flex justify-center items-center">
-    <memeGrid :imgTL="" :imgTR="" :imgBL="" :imgBR="" />
+    <memeGrid :imgTL="'/images/amarnath.jpg'" :imgTR="'/images/amarnath.jpg'" :imgBL="'/images/amarnath.jpg'" :imgBR="'/images/amarnath.jpg'" />
   </section>
 </template>
 <script>
