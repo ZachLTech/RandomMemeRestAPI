@@ -14,11 +14,27 @@ const app = new Elysia()
     })
 
     .get('/random/json', ({set}) => {
-      ((!!(Math.random() * 2 | 0))) ? set.redirect = '/funny/pic/json':set.redirect = '/funny/vid/json'; // Random Bool to redirect- 1 line :D
+      ((!!(Math.random() * 2 | 0))) ? set.redirect = '/pic/json':set.redirect = '/vid/json'; // Random Bool to redirect- 1 line :D
     })
     .get('/random/html', ({set}) => {
-      ((!!(Math.random() * 2 | 0))) ? set.redirect = '/funny/pic/html':set.redirect = '/funny/vid/html';
+      ((!!(Math.random() * 2 | 0))) ? set.redirect = '/pic/html':set.redirect = '/vid/html';
     }) 
+    .get('/random/json/:amount', ({set, params: { amount } }) => {
+      ((!!(Math.random() * 2 | 0))) ? set.redirect = `/pic/json/${amount}`:set.redirect = `/vid/json/${amount}`;
+
+      let json: any = {
+        success: 'true',
+        MemeURL: ['test','test'],
+        Please: 'Come Again!'
+      };
+
+      for(let i = 0; i < Number(amount); i++){
+        json.MemeURL.push("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
+      }
+
+      return json;
+
+    })
 
     .get('/pic/json', () => {
 
@@ -45,20 +61,34 @@ const app = new Elysia()
     })
     .get('/pic/json/:amount', ({ params: { amount } }) => {
       
-      let json = {
+      let json: any = {
         success: 'true',
         MemeURL: [],
         Please: 'Come Again!'
       };
-      let obj = JSON.parse(json.toString());    
 
       for(let i = 0; i < Number(amount); i++){
-        obj.MemeURL.push("");
-        
+        json.MemeURL.push("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
       }
 
       return json;
 
+    })
+
+    .get('/vid/json/:amount', ({ params: { amount } }) => {
+      
+      let json: any = {
+        success: 'true',
+        MemeURL: [],
+        Please: 'Come Again!'
+      };
+
+      for(let i = 0; i < Number(amount); i++){
+        json.MemeURL.push("https://zipline.lopezhome.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false");
+      }
+
+      return json;
+      
     })
     
     .use(html())
