@@ -31,6 +31,7 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 - ~~Setup and write endpoints / API code~~
 - ~~Integrate docker and deploy API (with working domain & endpoints)~~
 - ~~Start on frontend~~
-- Shorten endpoints (already done in readme)
-- Add multi-meme requests to API for frontend
+- ~~Shorten endpoints (already done in readme)~~
+- ~~Add multi-meme requests to API for frontend~~
+- Add meme grid button to randomize
 - Finish Frontend

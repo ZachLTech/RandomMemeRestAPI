@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" class="flex justify-center items-center h-[85vh]">
+  <div id="hero" class="flex justify-center items-center h-[55rem]">
     <hero />
   </div>
   <section id="demo" class="flex justify-center items-center">
@@ -39,25 +39,55 @@
     </div>
     <div role="tablist" class="tabs tabs-lifted self-center mr-0 w-[49vw] shadow-xl rounded-xl bg-base-300 p-2">
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Provides a meme that might be either a video or photo and returns HTML to serve your funny content</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/random/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme that might be either a video or photo and returns HTML to serve your funny content</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/json" checked />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box px-4 py-6 text-xl h-[110px]">Provides a meme just as the previous endpoint, except this returns JSON format providing the direct URL to your randomized meme</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/random/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme just as the previous endpoint, except this returns JSON format providing the direct URL to your randomized meme</div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny video in HTML format to serve content immediately</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/vid/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in HTML format to serve content immediately</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/json" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny video in JSON format for parsing direct video URL</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/vid/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in JSON format for parsing direct video URL</div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny picture in HTML format to serve content immediately</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/pic/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in HTML format to serve content immediately</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/json" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">Returns a funny picture in JSON format for parsing direct image URL</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/pic/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in JSON format for parsing direct image URL</div>
+
+      <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="-/json/x" />
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">'-' can be either "random", "pic", or "vid" depending on what you want, and this endpoint will return JSON containing an array of X amount of meme URLs</div>
     </div>
   </section>
   <section class="flex justify-center items-center">
-    <memeGrid :imgTL="'/images/amarnath.jpg'" :imgTR="'/images/amarnath.jpg'" :imgBL="'/images/amarnath.jpg'" :imgBR="'/images/amarnath.jpg'" />
+    <memeGrid :imgTL="'https://picsum.photos/803/603'" :imgTR="'https://picsum.photos/802/602'" :imgBL="'https://picsum.photos/801/601'" :imgBR="'https://picsum.photos/800/600'" />
   </section>
+  <section class="flex justify-center items-center flex-col gap-8">
+    <details>
+      <summary class="text-5xl font-bold text-primary">Disclaimer</summary>
+      <div class="flex flex-col justify-center items-center w-[49vw] rounded-lg shadow-lg bg-base-200 px-8 py-12">
+        <p class="text-3xl text-left max-w-[900px]">
+          &emsp;&emsp;The memes displayed here are solely for entertainment
+          purposes. None of the content should be taken seriously,
+          and I do not agree with or endorse the messages conveyed
+          by the memes. This project is created purely for fun, and
+          the memes are sourced from various friends and external sources.
+          <br><br>
+          &emsp;&emsp;While I strive to ensure the content is lighthearted and
+          enjoyable, there's a possibility that some memes may be
+          distasteful or offensive inadvertently. If you come across
+          any content that is inappropriate or offensive, please let
+          me know, and I will take appropriate action.
+        </p>
+        <p class="text-3xl text-center font-bold max-w-[900px] mt-8">Thank you for understanding.</p>
+      </div>
+
+    </details>
+  </section>
+  
+  <footer class="flex flex-col gap-5 justify-center items-center mb-[2rem]">
+    <div class="divider px-5"></div>
+    <p class="text-3xl font-bold">Made with ❤️ by <a class="underline bg-gradient-to-r from-green-400 to-green-700 inline-block text-transparent bg-clip-text" href="https://zachl.space" target="_blank">Zach</a></p>
+  </footer>
 </template>
 <script>
-  const memeArr = [] // Gonna implement where it gets as many as u want & returns json
+  const memeArr = fetch(''); // Gonna implement where it gets as many as u want & returns json
 </script>

@@ -14,7 +14,7 @@
 body{
     overflow-x: hidden;
 }
-h1,p,img{
+h1,p,img,summary{
     user-select: none;
 }
 

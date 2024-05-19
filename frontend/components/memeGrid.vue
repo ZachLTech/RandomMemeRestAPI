@@ -7,7 +7,7 @@
         <img :src="`${ imgTR }`" alt="Meme 2" class="h-full w-full object-cover">
       </div>
       <div class="col-span-1 row-span-1 flex items-center justify-center text-3xl text-center">
-        <p>Some Memes</p>
+        <p class="font-bold">Some Memes</p>
       </div>
       <div class="col-span-3 row-span-3 border-transparent rounded-2xl overflow-hidden shadow-lg">
         <img :src="`${ imgBR }`" alt="Meme 3" class="h-full w-full object-cover">
