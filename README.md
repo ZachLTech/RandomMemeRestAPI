@@ -39,5 +39,5 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 - ~~Add multi-meme requests to API for frontend~~
 - ~~Add meme grid button to randomize~~
 - ~~Finish Frontend~~
-- (BE) Implement recursive function so /x/json/y endpoint doesn't return repeated memes
-- (FE) Add mobile support
+- (BE) Implement recursive function so /x/json/y endpoint doesn't return repeated memes 
+- ~~(FE) Add mobile support~~
