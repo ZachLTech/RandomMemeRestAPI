@@ -73,11 +73,11 @@ const app = new Elysia()
           while(j != 0){
             if(json.MemeURL[j] == json.MemeURL[j-1]){
               json.MemeURL[j] = ("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
-              console.log(`added new since ${json.MemeURL[j]} & ${json.MemeURL[j-1]} were the same`);
+              // console.log(`added new since ${json.MemeURL[j]} & ${json.MemeURL[j-1]} were the same`);
               continue;
             }
             else{
-              console.log(`${json.MemeURL[j]} & ${json.MemeURL[j-1]} were not the same`);
+              // console.log(`${json.MemeURL[j]} & ${json.MemeURL[j-1]} were not the same`);
               j--;
             }
           }
