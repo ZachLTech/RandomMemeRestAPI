@@ -1,8 +1,11 @@
 <template>
-  <div id="hero" class="flex justify-center items-center h-[55rem]">
-    <hero />
+  <header class="w-full flex justify-center items-center p-2 fixed z-10">
+    <navbar />
+  </header>
+  <div class="flex justify-center items-center h-[35rem] sm:h-[55rem]">
+    <hero id="hero" />
   </div>
-  <section id="demo" class="flex justify-center items-center">
+  <section id="window" class="flex justify-center items-center">
     <separator />
   </section>
   <section id="about" class="flex flex-col justify-center items-center gap-24 h-auto">
@@ -19,11 +22,11 @@
     </div>
     <div class="flex flex-col gap-5 justify-center items-center">
       <div class="flex gap-5">
-        <testimonial :width="'24vw'" :name="'Amarnath Pate 🐒'" :timeSince="'1 Decade'" :testimonialText="'had me cracking up all night long!!'" :imageSrc="'/images/amarnath.jpg'" />
-        <testimonial :width="'24vw'" :name="'Thandoid Manlez 🐱'" :timeSince="'5 Seconds'" :testimonialText="'whew! This brought some good laughter into my life!! meow'" :imageSrc="'/images/thandi.png'" />
+        <testimonial class="hover:-translate-y-4 transition-all" :width="'24vw'" :name="'Amarnath Pate 🐒'" :timeSince="'1 Decade'" :testimonialText="'had me cracking up all night long!!'" :imageSrc="'/images/amarnath.jpg'" />
+        <testimonial class="hover:-translate-y-4 transition-all" :width="'24vw'" :name="'Thandoid Manlez 🐱'" :timeSince="'5 Seconds'" :testimonialText="'whew! This brought some good laughter into my life!! meow'" :imageSrc="'/images/thandi.png'" />
       </div>
       <h1 class="text-9xl opacity-50">Testimonials</h1>
-      <testimonial :width="'49vw'" :name="'Jossaya Camel 🐪'" :timeSince="'8 Days'" :testimonialText="'Wowza this API was so great that it saved my entire family from falling apart. Truly amazing and resulted in my company avoiding bankruptcy!! 10/10 would recommend.'" :imageSrc="'/images/jossaya.png'" />
+      <testimonial class="hover:-translate-y-4 transition-all" :width="'49vw'" :name="'Jossaya Camel 🐪'" :timeSince="'8 Days'" :testimonialText="'Wowza this API was so great that it saved my entire family from falling apart. Truly amazing and resulted in my company avoiding bankruptcy!! 10/10 would recommend.'" :imageSrc="'/images/jossaya.png'" />
     </div>    
   </section>
   <section id="docs" class="flex flex-col justify-center items-center gap-20">
@@ -57,12 +60,12 @@
       <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">'-' can be either "random", "pic", or "vid" depending on what you want, and this endpoint will return JSON containing an array of X amount of meme URLs</div>
     </div>
   </section>
-  <section class="flex justify-center items-center">
+  <section v-if="$device.isDesktop" id="demo" class="flex justify-center items-center">
     <memeGrid :imgTL="'https://picsum.photos/803/603'" :imgTR="'https://picsum.photos/802/602'" :imgBL="'https://picsum.photos/801/601'" :imgBR="'https://picsum.photos/800/600'" />
   </section>
-  <section class="flex justify-center items-center flex-col gap-8">
-    <details>
-      <summary class="text-5xl font-bold text-primary">Disclaimer</summary>
+  <section id="disclaimer" class="flex justify-center items-center flex-col gap-8">
+    <details class="transition-all delay-75">
+      <summary class="text-5xl font-bold text-primary transition-all">Disclaimer</summary>
       <div class="flex flex-col justify-center items-center w-[49vw] rounded-lg shadow-lg bg-base-200 px-8 py-12">
         <p class="text-3xl text-left max-w-[900px]">
           &emsp;&emsp;The memes displayed here are solely for entertainment
@@ -82,8 +85,7 @@
 
     </details>
   </section>
-  
-  <footer class="flex flex-col gap-5 justify-center items-center mb-[2rem]">
+  <footer id="footer" class="flex flex-col gap-5 justify-center items-center mb-[2rem]">
     <div class="divider px-5"></div>
     <p class="text-3xl font-bold">Made with ❤️ by <a class="underline bg-gradient-to-r from-green-400 to-green-700 inline-block text-transparent bg-clip-text" href="https://zachl.space" target="_blank">Zach</a></p>
   </footer>
@@ -91,3 +93,18 @@
 <script>
   const memeArr = fetch(''); // Gonna implement where it gets as many as u want & returns json
 </script>
+
+<style>
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #hero {  
+    animation: 1s ease-in-out 0s 1 appear;
+  }
+</style>
