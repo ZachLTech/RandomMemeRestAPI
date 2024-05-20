@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  meme_api_backend:
+  api_zachs_memes:
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     ports:
       - 9786:3000
-  meme_api_frontend:
+  site_zachs_memes:
     build:
       context: ./frontend
       dockerfile: Dockerfile
