@@ -4,9 +4,7 @@ import { cors } from '@elysiajs/cors'
 
 const app = new Elysia()
     //CORS
-    .use(cors({
-      origin: /.memeapi\.zachl\.space$/
-    }))
+    .use(cors())
 
     .get('/', () => { // Message for Root
       let json = {
