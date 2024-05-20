@@ -64,18 +64,20 @@ const app = new Elysia()
       }
       // Pushes proper amount of URLs to Array & makes sure there aren't repeats
       for(let i = 0; i < amountNum; i++){
-        let j = i++;
+        let j = i;
         json.MemeURL.push("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
-        if(i = 0){
+        if(i == 0){
           continue;
         }
         else{
           while(j != 0){
             if(json.MemeURL[j] == json.MemeURL[j-1]){
-              json.MemeURL[j] = "https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
+              json.MemeURL[j] = ("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
+              console.log(`added new since ${json.MemeURL[j]} & ${json.MemeURL[j-1]} were the same`);
               continue;
             }
             else{
+              console.log(`${json.MemeURL[j]} & ${json.MemeURL[j-1]} were not the same`);
               j--;
             }
           }
