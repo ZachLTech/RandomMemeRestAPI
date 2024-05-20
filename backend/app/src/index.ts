@@ -1,7 +1,13 @@
 import { Elysia } from 'elysia'
 import { html } from '@elysiajs/html'
+import { cors } from '@elysiajs/cors'
 
 const app = new Elysia()
+    //CORS
+    .use(cors({
+      origin: /.memeapi\.zachl\.space$/
+    }))
+
     .get('/', () => { // Message for Root
       let json = {
         Greetings: "Welcome to Zach's Meme API! Below are links to where you can get more info and find all the endpoints attached to this RESTful API.",

@@ -41,20 +41,21 @@
       </p>
     </div>
     <div role="tablist" class="tabs tabs-lifted self-center mr-0 w-[49vw] shadow-xl rounded-xl bg-base-300 p-2">
+      <!-- These could've been components but like eh whatever-->
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/random/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme that might be either a video or photo and returns HTML to serve your funny content</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/random/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme that might be either a video or photo and returns HTML to serve your funny content</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/random/json" checked />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/random/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme just as the previous endpoint, except this returns JSON format providing the direct URL to your randomized meme</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/random/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Provides a meme just as the previous endpoint, except this returns JSON format providing the direct URL to your randomized meme</div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/vid/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in HTML format to serve content immediately</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/vid/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in HTML format to serve content immediately</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/vid/json" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/vid/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in JSON format for parsing direct video URL</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/vid/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny video in JSON format for parsing direct video URL</div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/html" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/pic/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in HTML format to serve content immediately</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/pic/html" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in HTML format to serve content immediately</div>
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="/pic/json" />
-      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]"><a href="https://memeapi.zachl.space/pic/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in JSON format for parsing direct image URL</div>
+      <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px] w-[48vw]"><a href="https://memeapi.zachl.space/pic/json" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#92BA5E]">Try It!</a> Returns a funny picture in JSON format for parsing direct image URL</div>
 
       <input type="radio" name="my_tabs_2" role="tab" class="tab text-md" aria-label="-/json/x" />
       <div role="tabpanel" class="tab-content bg-base-200 border-base-300 border-none rounded-box px-4 py-6 text-xl h-[110px]">'-' can be either "random", "pic", or "vid" depending on what you want, and this endpoint will return JSON containing an array of X amount of meme URLs</div>
@@ -91,7 +92,8 @@
   </footer>
 </template>
 <script>
-  const memeArr = fetch(''); // Gonna implement where it gets as many as u want & returns json
+  let memeArr = await fetch('https://memeapi.zachl.space/random/json/4');
+  console.log(memeArr);
 </script>
 
 <style>
