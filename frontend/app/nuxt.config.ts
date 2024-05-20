@@ -20,5 +20,19 @@ export default defineNuxtConfig({
     name: 'Meme API',
     description: 'A simple to use API for Memes which everyone most definitely needs lol',
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+  },
+
+  vite: {
+    build: {
+      target: 'esnext' //browsers can handle the latest ES features
+    },
+    esbuild: {
+      supported: {
+        'top-level-await': true //browsers can handle top-level-await features
+      },
+    }
   }
+  
+
+
 })
