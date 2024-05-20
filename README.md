@@ -19,9 +19,9 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 - [`/vid/json`](https://memeapi.zachl.space/vid/json)
 - [`/pic/json`](https://memeapi.zachl.space/pic/json)
 
-- [`/random/json/x`](https://memeapi.zachl.space/pic/json)
-- [`/vid/json/x`](https://memeapi.zachl.space/pic/json)
-- [`/pic/json/x`](https://memeapi.zachl.space/pic/json)
+- [`/random/json/x`](https://memeapi.zachl.space/random/json/5)
+- [`/vid/json/x`](https://memeapi.zachl.space/vid/json/5)
+- [`/pic/json/x`](https://memeapi.zachl.space/pic/json/5)
 ### For HTML Results
 - [`/random/html`](https://memeapi.zachl.space/random/html)
 - [`/vid/html`](https://memeapi.zachl.space/vid/html)
@@ -39,5 +39,5 @@ Below are the Available API URI's you can use to try my API yourself. I'm making
 - ~~Add multi-meme requests to API for frontend~~
 - ~~Add meme grid button to randomize~~
 - ~~Finish Frontend~~
-- (BE) Implement recursive function so /x/json/y endpoint doesn't return repeated memes 
+- ~~(BE) Implement recursive function so /x/json/y endpoint doesn't return repeated memes~~
 - ~~(FE) Add mobile support~~
