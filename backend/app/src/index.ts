@@ -9,9 +9,9 @@ const app = new Elysia()
     .get('/', () => { // Message for Root
       let json = {
         Greetings: "Welcome to Zach's Meme API! Below are links to where you can get more info and find all the endpoints attached to this RESTful API.",
-        Website: "https://memes.zachl.space",
+        Website: "https://memes.zachl.tech",
         Source: "https://github.com/ZachLTech/RandomMemeRestAPI",
-        Docs: "https://memes.zachl.space/#docs"
+        Docs: "https://memes.zachl.tech/#docs"
       };
 
       return json;

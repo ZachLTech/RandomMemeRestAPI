@@ -36,7 +36,7 @@
   let loading = ref(false);
 
   async function newMemes(){
-    const result = ref(await $fetch('https://memeapi.zachl.space/pic/json/4'));
+    const result = ref(await $fetch('https://memeapi.zachl.tech/pic/json/4'));
     return result.value;
   } 
   let data = await newMemes();

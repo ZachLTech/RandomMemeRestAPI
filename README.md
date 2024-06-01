@@ -15,24 +15,24 @@ Just a funny API with elysiajs because bun is cool and I had this idea a while a
 
 ## Try It
 
-### [Website](https://memes.zachl.space)
-You can visit the website for this repo with a demo [here](https://memes.zachl.space)
+### [Website](https://memes.zachl.tech)
+You can visit the website for this repo with a demo [here](https://memes.zachl.tech)
 
 ### Endpoints
 Below are also the Available API URI's you can use to try my API yourself. Have Fun!
 
 #### For JSON Results
-- [`/random/json`](https://memeapi.zachl.space/random/json)
-- [`/vid/json`](https://memeapi.zachl.space/vid/json)
-- [`/pic/json`](https://memeapi.zachl.space/pic/json)
+- [`/random/json`](https://memeapi.zachl.tech/random/json)
+- [`/vid/json`](https://memeapi.zachl.tech/vid/json)
+- [`/pic/json`](https://memeapi.zachl.tech/pic/json)
 
-- [`/random/json/x`](https://memeapi.zachl.space/random/json/5)
-- [`/vid/json/x`](https://memeapi.zachl.space/vid/json/5)
-- [`/pic/json/x`](https://memeapi.zachl.space/pic/json/5)
+- [`/random/json/x`](https://memeapi.zachl.tech/random/json/5)
+- [`/vid/json/x`](https://memeapi.zachl.tech/vid/json/5)
+- [`/pic/json/x`](https://memeapi.zachl.tech/pic/json/5)
 #### For HTML Results
-- [`/random/html`](https://memeapi.zachl.space/random/html)
-- [`/vid/html`](https://memeapi.zachl.space/vid/html)
-- [`/pic/html`](https://memeapi.zachl.space/pic/html)
+- [`/random/html`](https://memeapi.zachl.tech/random/html)
+- [`/vid/html`](https://memeapi.zachl.tech/vid/html)
+- [`/pic/html`](https://memeapi.zachl.tech/pic/html)
 
 ## Self-Hosted Deployment 🐋
 
