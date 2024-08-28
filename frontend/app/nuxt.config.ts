@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/device', '@nuxtjs/plausible', "@nuxtjs/seo"],
   
   plausible: {
-    apiHost: 'https://analytics.lopezhome.tech',
+    apiHost: 'https://analytics.zachl.tech',
   },
 
   site: {

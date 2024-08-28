@@ -29,7 +29,7 @@ const app = new Elysia()
 
     .get('/pic/json', () => {
 
-      let link = "https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
+      let link = "https://zipline.zachl.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
       let json = {
         success: 'true',
         MemeURL: link,
@@ -40,7 +40,7 @@ const app = new Elysia()
     })
     .get('/vid/json', () => {
       
-      let link = "https://zipline.lopezhome.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false";
+      let link = "https://zipline.zachl.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false";
       let json = {
         success: 'true',
         MemeURL: link,
@@ -65,14 +65,14 @@ const app = new Elysia()
       // Pushes proper amount of URLs to Array & makes sure there aren't repeats
       for(let i = 0; i < amountNum; i++){
         let j = i;
-        json.MemeURL.push("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
+        json.MemeURL.push("https://zipline.zachl.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
         if(i == 0){
           continue;
         }
         else{
           while(j != 0){
             if(json.MemeURL[j] == json.MemeURL[j-1]){
-              json.MemeURL[j] = ("https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
+              json.MemeURL[j] = ("https://zipline.zachl.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false");
               // console.log(`added new since ${json.MemeURL[j]} & ${json.MemeURL[j-1]} were the same`);
               continue;
             }
@@ -97,7 +97,7 @@ const app = new Elysia()
       };
 
       for(let i = 0; i < Number(amount); i++){
-        json.MemeURL.push("https://zipline.lopezhome.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false");
+        json.MemeURL.push("https://zipline.zachl.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false");
       }
 
       return json;
@@ -110,7 +110,7 @@ const app = new Elysia()
               <img id="media" src=""></img>
               <script defer>
                 let media = document.getElementById("media");
-                let link = "https://zipline.lopezhome.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
+                let link = "https://zipline.zachl.tech/r/pic-" + Math.floor(Math.random() * 111 + 1) + ".png?compress=false";
                 media.setAttribute('src', link);
               </script>
     `)
@@ -120,7 +120,7 @@ const app = new Elysia()
             </video>
             <script defer>
               let media = document.getElementById("media");
-              let link = "https://zipline.lopezhome.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false";
+              let link = "https://zipline.zachl.tech/r/vid-" + Math.floor(Math.random() * 77 + 1) + ".mp4?compress=false";
               media.setAttribute('src', link);
             </script>
             
