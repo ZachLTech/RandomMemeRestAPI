@@ -1,6 +1,6 @@
 # Zach's Meme API 😂
 
-[![Status](https://uptime.lopezhome.tech/api/badge/27/status?style=for-the-badge)](https://uptime.lopezhome.tech/status/memeapi)
+[![Status](https://uptime.zachl.tech/api/badge/27/status?style=for-the-badge)](https://uptime.zachl.tech/status/memeapi)
 
 Just a funny API with elysiajs because bun is cool and I had this idea a while ago for fun 😀
 
